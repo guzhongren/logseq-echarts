@@ -2,20 +2,12 @@
   "compilerOptions": {
     "target": "es5",
     "module": "commonjs",
-    "lib": [
-      "es2021",
-      "es7",
-      "es6",
-      "dom"
-    ],
+    "lib": ["es2021", "es7", "es6", "dom"],
     "declaration": true,
     "outDir": "dist",
     "strict": true,
     "strictNullChecks": false,
     "esModuleInterop": true
   },
-  "exclude": [
-    "node_modules",
-    "dist"
-  ]
+  "exclude": ["node_modules", "dist"]
 }

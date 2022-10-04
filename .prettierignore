@@ -1,0 +1,10 @@
+# Ignore artifacts:
+dist
+coverage
+node_modules
+cypress/downloads
+.lighthouseci
+
+cypress/fixtures/mockedImportAuth.json
+CHANGELOG.md
+pnpm-lock.yaml
