@@ -20,8 +20,11 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-    "./": [
+    "src/**/*{.ts,.tsx,.html}": [
       "lint"
+    ],
+    "./*{.md,.yaml,.json}": [
+      "prettier -c"
     ]
   },
   "keywords": [],
