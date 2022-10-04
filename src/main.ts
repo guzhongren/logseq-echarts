@@ -1,9 +1,12 @@
-import '@logseq/libs'
-import template from './template'
-import * as echarts from 'echarts'
-import { BlockEntity } from '@logseq/libs/dist/LSPlugin'
-import { parseStringToJson } from './lib/string-utils'
-import { findCode } from './lib/logseq-utils'
+import '@logseq/libs';
+
+import * as echarts from 'echarts';
+
+import { BlockEntity } from '@logseq/libs/dist/LSPlugin';
+
+import { findCode } from './lib/logseq-utils';
+import { parseStringToJson } from './lib/string-utils';
+import template from './template';
 
 function main() {
   logseq.Editor.registerSlashCommand('Create a chart', async () => {
@@ -12,7 +15,7 @@ function main() {
   })
 
   logseq.App.onMacroRendererSlotted(async ({ slot, payload }) => {
-    const [type] = payload.arguments
+    const [type, width, height] = payload.arguments
 
     if (!type?.startsWith(':logseq-echarts')) return
     const code = await findCode(payload.uuid)
@@ -20,7 +23,7 @@ function main() {
     return logseq.provideUI({
       key: payload.uuid,
       slot, reset: true,
-      template: `<img src=${getImgData(code)} style="width: 100%;height:100%;"></img>`,
+      template: `<img src=${getImgData(code, width, height)} style="width: 100%;height:100%;"></img>`,
     })
   })
 
@@ -28,7 +31,7 @@ function main() {
 }
 
 async function createChartAsCodeBlock(parentBlock: BlockEntity, jsonTemplate: string) {
-  const parentBlockContent = '{{renderer :logseq-echarts}}'
+  const parentBlockContent = '{{renderer :logseq-echarts, 1400px, 600px}}'
   await logseq.Editor.insertAtEditingCursor(parentBlockContent)
   const codeBlockContent = `\`\`\`json\n${jsonTemplate}\n\`\`\``
   await logseq.Editor.insertBlock(parentBlock.uuid, codeBlockContent, {
@@ -40,10 +43,10 @@ async function createChartAsCodeBlock(parentBlock: BlockEntity, jsonTemplate: st
 
 logseq.ready(main).catch(console.error)
 
-function getImgData (codeStr: string) {
+function getImgData (codeStr: string, width: string, height: string) {
   const chartDiv = document.createElement('div')
-  chartDiv.style.width = '1400px'
-  chartDiv.style.height = '400px'
+  chartDiv.style.width = width
+  chartDiv.style.height = height
   const chartInstance = echarts.init(chartDiv, null, {
     renderer: 'svg'
   })
