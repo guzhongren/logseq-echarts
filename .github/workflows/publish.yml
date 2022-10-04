@@ -19,11 +19,15 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '16.x'
-      - name: Build
-        id: build
+      - name: Install
         run: |
           npm install -g pnpm
           pnpm install
+      - name: Lint
+        run: pnpm run lint
+      - name: Build
+        id: build
+        run: |
           pnpm run build
           mkdir ${{ env.PLUGIN_NAME }}
           cp README.md package.json icon.svg ${{ env.PLUGIN_NAME }}
