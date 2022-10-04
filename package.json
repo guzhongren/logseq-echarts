@@ -5,7 +5,7 @@
     "icon": "./icon.svg"
   },
   "name": "logseq-echarts",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A plugin of logseq which integrates with [ECharts](https://echarts.apache.org/)",
   "main": "dist/index.html",
   "targets": {
