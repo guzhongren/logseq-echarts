@@ -19,3 +19,7 @@ A plugin of logseq which integrates with [ECharts](https://echarts.apache.org/)
 - Search `logseq-echarts` in Logseq marketplace and install it
 - Type `/Create a chart` command, the plugin will insert a demo chart
 - Customize your chart via updating the echarts options code (**JSON format**)
+
+## Tips
+
+- You can customize the size of chart with `width` and `height`, e.g. `{{renderer :logseq-echarts, 600px, 600px}}`
