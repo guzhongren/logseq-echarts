@@ -1,4 +1,7 @@
 # Logseq-echarts
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ![Logseq ECharts](./icon.png)
 
@@ -27,6 +30,23 @@ A plugin of logseq which integrates with [ECharts](https://echarts.apache.org/)
 ## Contributors
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tbody>
+    <tr>
+      <td align="center"><a href="https://github.com/dom8509"><img src="https://avatars.githubusercontent.com/u/933312?v=4?s=100" width="100px;" alt="Dominik Stamm"/><br /><sub><b>Dominik Stamm</b></sub></a><br /><a href="https://github.com/guzhongren/logseq-echarts/commits?author=dom8509" title="Code">💻</a> <a href="https://github.com/guzhongren/logseq-echarts/commits?author=dom8509" title="Tests">⚠️</a></td>
+    </tr>
+  </tbody>
+  <tfoot>
+    
+  </tfoot>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
 
