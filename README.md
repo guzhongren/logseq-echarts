@@ -23,3 +23,14 @@ A plugin of logseq which integrates with [ECharts](https://echarts.apache.org/)
 ## Tips
 
 - You can customize the size of chart with `width` and `height`, e.g. `{{renderer :logseq-echarts, 600px, 600px}}`
+
+## Contributors
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
