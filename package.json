@@ -21,10 +21,10 @@
   },
   "lint-staged": {
     "src/**/*{.ts,.tsx,.html}": [
-      "lint"
+      "npm run lint"
     ],
     "./*{.md,.yaml,.json}": [
-      "prettier -c"
+      "prettier -c ."
     ]
   },
   "keywords": [],

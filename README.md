@@ -1,6 +1,9 @@
 # Logseq-echarts
+
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+
 [![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ![Logseq ECharts](./icon.png)
@@ -20,7 +23,7 @@ A plugin of logseq which integrates with [ECharts](https://echarts.apache.org/)
 ## Usage steps
 
 - Search `logseq-echarts` in Logseq marketplace and install it
-- Type `/Create a chart` command, the plugin will insert a demo chart
+- Type `/Create a echart` command, the plugin will insert a demo chart
 - Customize your chart via updating the echarts options code (**JSON format**)
 
 ## Tips
@@ -40,7 +43,7 @@ A plugin of logseq which integrates with [ECharts](https://echarts.apache.org/)
     </tr>
   </tbody>
   <tfoot>
-    
+
   </tfoot>
 </table>
 
