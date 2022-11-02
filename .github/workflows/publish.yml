@@ -24,11 +24,11 @@ jobs:
           npm install -g pnpm
           pnpm install
       - name: Lint
-        run: npm run lint
+        run: pnpm run lint
       - name: Build
         id: build
         run: |
-          npx build
+          pnpm run build
           mkdir ${{ env.PLUGIN_NAME }}
           cp README.md package.json icon.svg ${{ env.PLUGIN_NAME }}
           mv dist ${{ env.PLUGIN_NAME }}
