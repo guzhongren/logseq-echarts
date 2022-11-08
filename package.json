@@ -39,7 +39,7 @@
     "@typescript-eslint/parser": "5.42.0",
     "buffer": "6.0.3",
     "eslint": "8.26.0",
-    "husky": "8.0.1",
+    "husky": "8.0.2",
     "lint-staged": "13.0.3",
     "parcel": "2.7.0",
     "prettier": "2.7.1",
