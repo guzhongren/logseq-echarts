@@ -31,7 +31,7 @@
   "author": "guzhongren",
   "license": "MIT",
   "dependencies": {
-    "@logseq/libs": "^0.0.10",
+    "@logseq/libs": "^0.0.12",
     "echarts": "^5.3.3"
   },
   "devDependencies": {
@@ -40,9 +40,9 @@
     "buffer": "6.0.3",
     "eslint": "8.28.0",
     "husky": "8.0.2",
-    "lint-staged": "13.1.0",
-    "parcel": "2.8.0",
+    "lint-staged": "13.0.3",
+    "parcel": "2.8.2",
     "prettier": "2.8.0",
-    "typescript": "4.9.3"
+    "typescript": "4.9.4"
   }
 }
