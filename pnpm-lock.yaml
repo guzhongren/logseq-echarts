@@ -1,9 +1,9 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@logseq/libs': ^0.0.12
   '@typescript-eslint/eslint-plugin': 5.47.1
   '@typescript-eslint/parser': 5.47.1
+  '@logseq/libs': ^0.0.14
   buffer: 6.0.3
   echarts: ^5.3.3
   eslint: 8.29.0
@@ -14,7 +14,7 @@ specifiers:
   typescript: 4.9.4
 
 dependencies:
-  '@logseq/libs': 0.0.12
+  '@logseq/libs': 0.0.14
   echarts: 5.3.3
 
 devDependencies:
@@ -183,8 +183,8 @@ packages:
     dev: true
     optional: true
 
-  /@logseq/libs/0.0.12:
-    resolution: {integrity: sha512-Efcb0pUrQUehCMS3qviyd5+g7kBptLM3geXvT07FOdzKsp9nbYT4ge7pMGZnnmzE9CPUTN3KLr6rhkQL2RM92A==}
+  /@logseq/libs/0.0.14:
+    resolution: {integrity: sha512-QcNeVxb4LIvV4Tid0ABZXV7fxYdZHynzLlukSk6Ydkuus+hBzLcjfK15nzybIRbiV7ANqSgTooDZkV/E4WP57Q==}
     dependencies:
       csstype: 3.1.0
       debug: 4.3.4
