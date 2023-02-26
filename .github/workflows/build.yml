@@ -1,7 +1,6 @@
 name: Build plugin
 
-on:
-  push
+on: push
 
 env:
   PLUGIN_NAME: logseq-echarts
