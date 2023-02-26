@@ -1,0 +1,28 @@
+name: Build plugin
+
+on:
+  push
+
+env:
+  PLUGIN_NAME: logseq-echarts
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+      - name: Install
+        run: |
+          npm install -g pnpm
+          pnpm install
+      - name: Lint
+        run: pnpm run lint
+      - name: Build
+        id: build
+        run: |
+          pnpm run build
