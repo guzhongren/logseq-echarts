@@ -16,17 +16,9 @@ function main() {
 
     if (!type?.startsWith(':logseq-echarts')) return
     const code = await findCode(payload.uuid)
-    await logseq.App.showMsg('Loading chart...')
-    return logseq.provideUI({
-      key: payload.uuid,
-      slot,
-      reset: true,
-      template: `<img src=${getImgData(
-        code,
-        width,
-        height,
-      )} style="width: 100%;height:100%;"></img>`,
-    })
+    await logseq.UI.showMsg('Loading chart...')
+
+    top.document.getElementById(slot).append(getChartDom(code, width, height))
   })
 }
 
@@ -34,7 +26,7 @@ async function createChartAsCodeBlock(
   parentBlock: BlockEntity,
   jsonTemplate: string,
 ) {
-  const parentBlockContent = '{{renderer :logseq-echarts, 1400px, 600px}}'
+  const parentBlockContent = '{{renderer :logseq-echarts, 600px, 600px}}'
   await logseq.Editor.insertAtEditingCursor(parentBlockContent)
   const codeBlockContent = `\`\`\`json\n${jsonTemplate}\n\`\`\``
   await logseq.Editor.insertBlock(parentBlock.uuid, codeBlockContent, {
@@ -45,7 +37,7 @@ async function createChartAsCodeBlock(
 
 logseq.ready(main).catch(console.error)
 
-function getImgData(codeStr: string, width: string, height: string) {
+function getChartDom(codeStr: string, width: string, height: string) {
   const chartDiv = document.createElement('div')
   chartDiv.style.width = width
   chartDiv.style.height = height
@@ -54,7 +46,5 @@ function getImgData(codeStr: string, width: string, height: string) {
   })
   const defaultOptions = parseStringToJson(codeStr)
   chartInstance.setOption(defaultOptions)
-  return chartInstance.getDataURL({
-    type: 'svg',
-  })
+  return chartInstance.getDom()
 }
