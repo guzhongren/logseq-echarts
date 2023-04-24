@@ -17,8 +17,7 @@ function main() {
     if (!type?.startsWith(':logseq-echarts')) return
     const code = await findCode(payload.uuid)
     await logseq.UI.showMsg('Loading chart...')
-
-    top.document.getElementById(slot).append(getChartDom(code, width, height))
+    renderChart(top.document.getElementById(slot), code, width, height)
   })
 }
 
@@ -37,14 +36,17 @@ async function createChartAsCodeBlock(
 
 logseq.ready(main).catch(console.error)
 
-function getChartDom(codeStr: string, width: string, height: string) {
-  const chartDiv = document.createElement('div')
-  chartDiv.style.width = width
-  chartDiv.style.height = height
-  const chartInstance = echarts.init(chartDiv, null, {
+function renderChart(
+  el: HTMLElement,
+  codeStr: string,
+  width: string,
+  height: string,
+) {
+  el.style.width = width
+  el.style.height = height
+  const chartInstance = echarts.init(el, null, {
     renderer: 'svg',
   })
   const defaultOptions = parseStringToJson(codeStr)
   chartInstance.setOption(defaultOptions)
-  return chartInstance.getDom()
 }
