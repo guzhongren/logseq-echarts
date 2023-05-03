@@ -16,16 +16,28 @@ function main() {
 
     if (!type?.startsWith(':logseq-echarts')) return
     const code = await findCode(payload.uuid)
-    await logseq.App.showMsg('Loading chart...')
-    return logseq.provideUI({
+    if (!code) {
+      return logseq.provideUI({
+        key: payload.uuid,
+        slot,
+        reset: true,
+        template: 'no chart data',
+      })
+    }
+    await logseq.UI.showMsg('Loading chart...')
+    const keepKey = `${logseq.baseInfo.id}-${slot}`
+    const keepOrNot = () => logseq.App.queryElementById(keepKey)
+    logseq.provideUI({
       key: payload.uuid,
       slot,
       reset: true,
-      template: `<img src=${getImgData(
-        code,
-        width,
-        height,
-      )} style="width: 100%;height:100%;"></img>`,
+      template: `<div id="${keepKey}" style="width: ${width};height: ${height}"></div>`,
+    })
+
+    Promise.resolve(keepOrNot()).then((res) => {
+      if (res) {
+        renderChart(top.document.getElementById(keepKey), code)
+      }
     })
   })
 }
@@ -45,16 +57,10 @@ async function createChartAsCodeBlock(
 
 logseq.ready(main).catch(console.error)
 
-function getImgData(codeStr: string, width: string, height: string) {
-  const chartDiv = document.createElement('div')
-  chartDiv.style.width = width
-  chartDiv.style.height = height
-  const chartInstance = echarts.init(chartDiv, null, {
+function renderChart(el: HTMLElement, codeStr: string) {
+  const chartInstance = echarts.init(el, null, {
     renderer: 'svg',
   })
   const defaultOptions = parseStringToJson(codeStr)
   chartInstance.setOption(defaultOptions)
-  return chartInstance.getDataURL({
-    type: 'svg',
-  })
 }
