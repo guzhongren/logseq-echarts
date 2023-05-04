@@ -21,7 +21,7 @@ function main() {
         key: payload.uuid,
         slot,
         reset: true,
-        template: 'no chart data',
+        template: 'No chart options data',
       })
     }
     await logseq.UI.showMsg('Loading chart...')
