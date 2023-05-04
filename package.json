@@ -2,6 +2,7 @@
   "logseq": {
     "id": "logseq-echarts",
     "title": "logseq-echarts",
+    "main": "dist/index.html",
     "icon": "./icon.svg"
   },
   "name": "logseq-echarts",

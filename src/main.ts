@@ -1,4 +1,3 @@
-import '@logseq/libs'
 import * as echarts from 'echarts'
 import { BlockEntity } from '@logseq/libs/dist/LSPlugin'
 import { findCode } from './lib/logseq-utils'
@@ -21,7 +20,7 @@ function main() {
         key: payload.uuid,
         slot,
         reset: true,
-        template: 'No chart options data',
+        template: 'No chart options',
       })
     }
     await logseq.UI.showMsg('Loading chart...')
@@ -55,7 +54,9 @@ async function createChartAsCodeBlock(
   })
 }
 
-logseq.ready(main).catch(console.error)
+import('@logseq/libs').then(() => {
+  logseq.ready(main).catch(console.error)
+})
 
 function renderChart(el: HTMLElement, codeStr: string) {
   const chartInstance = echarts.init(el, null, {
