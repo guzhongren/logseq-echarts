@@ -6,7 +6,7 @@ import { parseStringToJson } from './lib/string-utils'
 import template from './template'
 
 function main() {
-  logseq.Editor.registerSlashCommand('Create a echart', async () => {
+  logseq.Editor.registerSlashCommand('Create an echart', async () => {
     const parentBlock = await logseq.Editor.getCurrentBlock()
     await createChartAsCodeBlock(parentBlock, template)
   })
