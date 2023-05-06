@@ -14,7 +14,7 @@ A plugin of logseq which integrates with [ECharts](https://echarts.apache.org/)
 
 ### Screenshot
 
-![Logseq ECharts Plugin](./logseq-echarts-plugin.gif)
+![Logseq ECharts Plugin](./logseq.1.3.1.gif)
 
 ### Video
 
