@@ -8,6 +8,7 @@ export function dedent(str: string) {
 
 export function parseStringToJson(str: string) {
   const removeSingleLineComment = str.replace(/\/\/.*/g, '')
-  const formatted = removeSingleLineComment.replaceAll('\n', '')
+  const removeSemicolonStr = removeSingleLineComment.replace(/;/g, '')
+  const formatted = removeSemicolonStr.replaceAll('\n', '')
   return eval('(' + formatted + ')')
 }

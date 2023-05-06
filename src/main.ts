@@ -1,4 +1,3 @@
-import '@logseq/libs'
 import * as echarts from 'echarts'
 import { BlockEntity } from '@logseq/libs/dist/LSPlugin'
 import { findCode } from './lib/logseq-utils'
@@ -16,8 +15,29 @@ function main() {
 
     if (!type?.startsWith(':logseq-echarts')) return
     const code = await findCode(payload.uuid)
+    if (!code) {
+      return logseq.provideUI({
+        key: payload.uuid,
+        slot,
+        reset: true,
+        template: 'No chart options',
+      })
+    }
     await logseq.UI.showMsg('Loading chart...')
-    renderChart(top.document.getElementById(slot), code, width, height)
+    const keepKey = `${logseq.baseInfo.id}-${slot}`
+    const keepOrNot = () => logseq.App.queryElementById(keepKey)
+    logseq.provideUI({
+      key: payload.uuid,
+      slot,
+      reset: true,
+      template: `<div id="${keepKey}" style="width: ${width};height: ${height}"></div>`,
+    })
+
+    Promise.resolve(keepOrNot()).then((res) => {
+      if (res) {
+        renderChart(top.document.getElementById(keepKey), code)
+      }
+    })
   })
 }
 
@@ -25,7 +45,7 @@ async function createChartAsCodeBlock(
   parentBlock: BlockEntity,
   jsonTemplate: string,
 ) {
-  const parentBlockContent = '{{renderer :logseq-echarts, 90rem, 50rem}}'
+  const parentBlockContent = '{{renderer :logseq-echarts, 1400px, 600px}}'
   await logseq.Editor.insertAtEditingCursor(parentBlockContent)
   const codeBlockContent = `\`\`\`json\n${jsonTemplate}\n\`\`\``
   await logseq.Editor.insertBlock(parentBlock.uuid, codeBlockContent, {
@@ -34,16 +54,11 @@ async function createChartAsCodeBlock(
   })
 }
 
-logseq.ready(main).catch(console.error)
+import('@logseq/libs').then(() => {
+  logseq.ready(main).catch(console.error)
+})
 
-function renderChart(
-  el: HTMLElement,
-  codeStr: string,
-  width: string,
-  height: string,
-) {
-  el.style.width = width
-  el.style.height = height
+function renderChart(el: HTMLElement, codeStr: string) {
   const chartInstance = echarts.init(el, null, {
     renderer: 'svg',
   })
