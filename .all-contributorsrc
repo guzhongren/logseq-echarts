@@ -26,6 +26,15 @@
         "test",
         "code"
       ]
+    },
+    {
+      "login": "yiningv",
+      "name": "山不说",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13034020?v=4",
+      "profile": "https://github.com/yiningv",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
