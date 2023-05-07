@@ -103,7 +103,7 @@ export default {
   // preset: undefined,
   preset: 'ts-jest',
   transform: {
-    '^.+\\.(ts|tsx)?$': 'ts-jest'
+    '^.+\\.(ts|tsx)?$': 'ts-jest',
   },
 
   // Run tests from one or more projects

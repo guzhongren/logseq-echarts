@@ -1,12 +1,11 @@
 import { dedent, parseStringToJson } from '../../src/lib/string-utils'
 
 describe('string-utils', () => {
-
   const comment = '// comment here'
   const whiteSpaceAtStart = `
 
   `
-    const chartOptionJSONString = `{
+  const chartOptionJSONString = `{
       ${comment}\n
       xAxis: {
         type: 'category',
@@ -23,8 +22,7 @@ describe('string-utils', () => {
       ]
     };`
 
-    const chartOptionsStringWithWhiteSpace = `${whiteSpaceAtStart}${chartOptionJSONString}`
-
+  const chartOptionsStringWithWhiteSpace = `${whiteSpaceAtStart}${chartOptionJSONString}`
 
   describe('parseStringToJson', () => {
     it('should work', () => {
@@ -44,7 +42,7 @@ describe('string-utils', () => {
     })
   })
 
-  describe('dedent', ()=> {
+  describe('dedent', () => {
     it('should remove new line', () => {
       const result = dedent(chartOptionJSONString)
 
@@ -63,5 +61,4 @@ describe('string-utils', () => {
       expect(result.length).toEqual(311)
     })
   })
-
 })
