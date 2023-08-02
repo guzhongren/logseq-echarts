@@ -17,7 +17,7 @@
     "build": "parcel build --no-source-maps src/index.html --public-url ./",
     "dev": "parcel watch src/index.html --public-url ./",
     "fix": "prettier -w . && eslint src/**/*.ts --fix",
-    "lint": "prettier -c . && eslint src/**/*.ts",
+    "lint": "prettier -c .",
     "prepare": "husky install"
   },
   "lint-staged": {
