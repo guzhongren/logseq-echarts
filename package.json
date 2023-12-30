@@ -32,7 +32,7 @@
   "author": "guzhongren",
   "license": "MIT",
   "dependencies": {
-    "@logseq/libs": "^0.0.16",
+    "@logseq/libs": "^0.0.17",
     "echarts": "^5.3.3"
   },
   "devDependencies": {
