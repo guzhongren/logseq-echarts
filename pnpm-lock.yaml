@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@logseq/libs':
-    specifier: ^0.0.16
-    version: 0.0.16
+    specifier: ^0.0.17
+    version: 0.0.17
   echarts:
     specifier: ^5.3.3
     version: 5.3.3
@@ -799,8 +799,8 @@ packages:
     dev: true
     optional: true
 
-  /@logseq/libs@0.0.16:
-    resolution: {integrity: sha512-lsiwpBtZd/j6n02hp2ytP+LZZOoZxmqBj0MpULT4CajrH51pnI65Bzcb4+Ne/lJW6IzMbIinYmMm0Zoi3nL65g==}
+  /@logseq/libs@0.0.17:
+    resolution: {integrity: sha512-SkzzAaocmrgeHYrCOaRyEqzPOxw3d0qVEZSrt9qVvXE4tuEgbvEHR8tzI1N5RjgAv+PDWuGPiP7/mhcXHpINEw==}
     dependencies:
       csstype: 3.1.0
       debug: 4.3.4
