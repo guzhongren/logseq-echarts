@@ -32,8 +32,8 @@ devDependencies:
     specifier: 8.56.0
     version: 8.56.0
   husky:
-    specifier: 9.0.1
-    version: 9.0.1
+    specifier: 9.0.5
+    version: 9.0.5
   jest:
     specifier: ^29.5.0
     version: 29.5.0(@types/node@20.1.0)(ts-node@10.9.1)
@@ -3023,8 +3023,8 @@ packages:
     engines: {node: '>=16.17.0'}
     dev: true
 
-  /husky@9.0.1:
-    resolution: {integrity: sha512-rXCT8yF2v3awSG03AG6IgICDhJ+m8o3jL1ROwsT4nQZ6urEyKSj0IWFDIh5YC2zgZeAxWksNMbN6rYY4BE1Zrw==}
+  /husky@9.0.5:
+    resolution: {integrity: sha512-/EX48XLor4FczjgdJjwK4qMETrJxJqF4rkgo+NUeK8b2F4TV6s5QxAuG2JZfxm4b9WnrgBGS7bA/JK+H5CKg+A==}
     engines: {node: '>=18'}
     hasBin: true
     dev: true
