@@ -47,11 +47,11 @@ jobs:
           prerelease: false
 
       - name: Upload zip file
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
           files: ${{ env.PLUGIN_NAME }}-${{ steps.build.outputs.tag_name }}.zip
 
       - name: Upload package.json
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
           files: ./package.json
