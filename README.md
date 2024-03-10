@@ -30,6 +30,17 @@ A plugin of logseq which integrates with [ECharts](https://echarts.apache.org/)
 
 - You can customize the size of chart with `width` and `height`, e.g. `{{renderer :logseq-echarts, 600px, 600px}}`
 
+### Release command in main branch
+
+```sh
+git tag {tag name}
+git push origin {tag name}
+
+# Delete tag
+git tag -d {tag name}
+git push origin :refs/tags/{tag name}
+```
+
 ## Contributors
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
