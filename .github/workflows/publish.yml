@@ -55,3 +55,8 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           files: ./package.json
+      - uses: anchore/sbom-action@v0
+        with:
+          path: ./
+          artifact-name: ${{ env.PLUGIN_NAME }}.${{ steps.build.outputs.tag_name }}.sbom.spdx.json
+      - uses: anchore/sbom-action/publish-sbom@v0
