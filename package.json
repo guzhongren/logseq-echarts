@@ -38,8 +38,8 @@
   "devDependencies": {
     "@types/jest": "^29.5.1",
     "@types/node": "^22.0.0",
-    "@typescript-eslint/eslint-plugin": "8.24.0",
-    "@typescript-eslint/parser": "8.24.0",
+    "@typescript-eslint/eslint-plugin": "8.24.1",
+    "@typescript-eslint/parser": "8.24.1",
     "buffer": "^6.0.3",
     "eslint": "9.20.1",
     "husky": "9.1.7",
