@@ -38,8 +38,8 @@ devDependencies:
     specifier: ^29.5.0
     version: 29.7.0(@types/node@22.14.0)(ts-node@10.9.2)
   lint-staged:
-    specifier: 15.5.0
-    version: 15.5.0
+    specifier: 15.5.1
+    version: 15.5.1
   parcel:
     specifier: 2.14.4
     version: 2.14.4
@@ -3941,8 +3941,8 @@ packages:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
     dev: true
 
-  /lint-staged@15.5.0:
-    resolution: {integrity: sha512-WyCzSbfYGhK7cU+UuDDkzUiytbfbi0ZdPy2orwtM75P3WTtQBzmG40cCxIa8Ii2+XjfxzLH6Be46tUfWS85Xfg==}
+  /lint-staged@15.5.1:
+    resolution: {integrity: sha512-6m7u8mue4Xn6wK6gZvSCQwBvMBR36xfY24nF5bMTf2MHDYG6S3yhJuOgdYVw99hsjyDt2d4z168b3naI8+NWtQ==}
     engines: {node: '>=18.12.0'}
     hasBin: true
     dependencies:
