@@ -44,8 +44,8 @@ devDependencies:
     specifier: 2.15.4
     version: 2.15.4
   prettier:
-    specifier: 3.6.0
-    version: 3.6.0
+    specifier: 3.6.1
+    version: 3.6.1
   ts-jest:
     specifier: ^29.1.0
     version: 29.4.0(@babel/core@7.27.4)(jest@30.0.3)(typescript@5.8.3)
@@ -4631,8 +4631,8 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: true
 
-  /prettier@3.6.0:
-    resolution: {integrity: sha512-ujSB9uXHJKzM/2GBuE0hBOUgC77CN3Bnpqa+g80bkv3T3A93wL/xlzDATHhnhkzifz/UE2SNOvmbTz5hSkDlHw==}
+  /prettier@3.6.1:
+    resolution: {integrity: sha512-5xGWRa90Sp2+x1dQtNpIpeOQpTDBs9cZDmA/qs2vDNN2i18PdapqY7CmBeyLlMuGqXJRIOPaCaVZTLNQRWUH/A==}
     engines: {node: '>=14'}
     hasBin: true
     dev: true
