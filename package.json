@@ -33,7 +33,7 @@
   "license": "MIT",
   "dependencies": {
     "@logseq/libs": "^0.0.17",
-    "echarts": "^5.5.0"
+    "echarts": "^6.0.0"
   },
   "devDependencies": {
     "@types/jest": "^30.0.0",
